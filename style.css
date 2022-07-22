@@ -11,7 +11,7 @@ h1 {
   text-align: center;
 }
 
-section {
+.desktop {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -21,6 +21,9 @@ section {
 .course {
   margin: 10px 20px;
   line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .courseimg {
@@ -117,4 +120,45 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.mobile {
+  display: none;
+  text-align: center;
+}
+
+.mobileview {
+  display: flex;
+  justify-content: center;
+}
+
+.mobileview .course {
+  margin: 12px;
+  line-height: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobileview .courseimg {
+  width: 210px;
+  height: 140px;
+}
+
+.mobileview p {
+  font-size: 0.8em;
+}
+
+@media screen and (max-width:960px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
 }
